@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chantals 3D Shop</title>
+<title>Chantals Shop</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -13,7 +13,7 @@
     --surface:#1e1e1e;
     --surface2:#272727;
     --surface3:#303030;
-    --p1:#ff6eb4;
+    --p1:#e74292;
     --p2:#ffe066;
     --p3:#6edaff;
     --p4:#a78bfa;
@@ -26,7 +26,7 @@
     --radius-lg:16px;
   }
   body{background:var(--bg);color:var(--text);font-family:'Nunito',sans-serif;min-height:100vh;overflow-x:hidden}
- 
+
   /* NAV */
   nav{display:flex;align-items:center;justify-content:space-between;padding:18px 40px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--bg);z-index:100}
   .logo{font-family:'Pacifico',cursive;font-size:26px;background:linear-gradient(90deg,var(--p1),var(--p2),var(--p3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
@@ -36,7 +36,7 @@
   .cart-btn{background:linear-gradient(135deg,var(--p1),var(--p4));color:#fff;border:none;padding:10px 22px;border-radius:30px;font-family:'Nunito',sans-serif;font-size:14px;font-weight:700;cursor:pointer;display:flex;align-items:center;gap:8px;transition:opacity 0.2s}
   .cart-btn:hover{opacity:0.88}
   .cart-count{background:#fff;color:var(--p4);border-radius:50%;width:20px;height:20px;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:800}
- 
+
   /* HERO */
   .hero{padding:70px 40px 50px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;border-bottom:1px solid var(--border);position:relative;overflow:hidden}
   .hero::before{content:'';position:absolute;top:-80px;right:-80px;width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(167,139,250,0.12),transparent 70%);pointer-events:none}
@@ -49,7 +49,7 @@
   .btn-primary:hover{opacity:0.88}
   .btn-ghost{background:transparent;color:var(--text);border:2px solid var(--border);padding:13px 28px;border-radius:30px;font-family:'Nunito',sans-serif;font-size:15px;font-weight:700;cursor:pointer;transition:border-color 0.2s;text-decoration:none;display:inline-flex;align-items:center}
   .btn-ghost:hover{border-color:var(--p1)}
- 
+
   .hero-visual{display:flex;align-items:center;justify-content:center;position:relative;height:320px}
   .hero-blob{width:220px;height:220px;border-radius:60% 40% 55% 45% / 50% 60% 40% 50%;background:linear-gradient(135deg,rgba(255,110,180,0.15),rgba(110,218,255,0.15));display:flex;align-items:center;justify-content:center;animation:morph 6s ease-in-out infinite}
   @keyframes morph{0%,100%{border-radius:60% 40% 55% 45% / 50% 60% 40% 50%}50%{border-radius:40% 60% 45% 55% / 60% 40% 55% 45%}}
@@ -58,20 +58,20 @@
   .hero-pill{position:absolute;background:var(--surface2);border:1px solid var(--border);border-radius:30px;padding:10px 16px;font-size:13px;font-weight:700}
   .hero-pill:nth-child(2){top:20px;right:0;color:var(--p2)}
   .hero-pill:nth-child(3){bottom:30px;left:0;color:var(--p3)}
- 
+
   /* FILTERS */
   .filters{padding:28px 40px;display:flex;gap:10px;border-bottom:1px solid var(--border);flex-wrap:wrap}
   .filter-btn{background:transparent;color:var(--text2);border:2px solid var(--border);padding:8px 18px;border-radius:30px;font-family:'Nunito',sans-serif;font-size:13px;font-weight:700;cursor:pointer;transition:all 0.2s}
   .filter-btn:hover{border-color:var(--p1);color:var(--p1)}
   .filter-btn.active{background:var(--p1);color:#fff;border-color:var(--p1)}
- 
+
   /* PRODUCTS */
   .section{padding:44px 40px}
   .section-header{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:28px}
   .section-title{font-family:'Pacifico',cursive;font-size:22px;color:var(--text)}
   .section-count{font-size:13px;color:var(--text3);font-weight:600}
   .products{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
- 
+
   .product-card{background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);overflow:hidden;cursor:pointer;transition:border-color 0.2s,transform 0.2s}
   .product-card:hover{transform:translateY(-4px)}
   .product-card:nth-child(1){--card-accent:var(--p1)}
@@ -81,14 +81,14 @@
   .product-card:nth-child(5){--card-accent:var(--p5)}
   .product-card:hover{border-color:var(--card-accent)}
   .product-card.in-cart{border-color:var(--p5)}
- 
+
   .product-img{height:160px;background:var(--surface2);display:flex;align-items:center;justify-content:center;font-size:64px;position:relative;overflow:hidden}
   .product-img img{width:100%;height:100%;object-fit:cover;transition:transform 0.3s}
   .product-card:hover .product-img img{transform:scale(1.05)}
   .product-badge{position:absolute;top:10px;left:10px;font-size:10px;font-weight:800;padding:4px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.5px}
   .product-badge.new{background:var(--p5);color:#0a2e1a}
   .product-badge.sale{background:var(--p2);color:#2e1a00}
- 
+
   .product-info{padding:16px}
   .product-cat{font-size:11px;color:var(--text3);letter-spacing:1px;text-transform:uppercase;font-weight:700;margin-bottom:5px}
   .product-name{font-size:16px;font-weight:700;color:var(--text);margin-bottom:4px}
@@ -97,7 +97,7 @@
   .product-price{font-size:18px;font-weight:800;color:var(--text)}
   .add-btn{background:var(--surface3);border:none;color:var(--text2);padding:8px 14px;border-radius:20px;font-size:12px;font-weight:700;cursor:pointer;transition:all 0.2s;font-family:'Nunito',sans-serif}
   .add-btn:hover{background:var(--p1);color:#fff}
- 
+
   /* MODAL */
   .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:200;display:none;align-items:center;justify-content:center}
   .modal-overlay.open{display:flex}
@@ -115,7 +115,7 @@
   .modal-specs li span{color:var(--text)}
   .modal-add{width:100%;padding:14px;background:linear-gradient(135deg,var(--p1),var(--p4));color:#fff;border:none;border-radius:30px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif;transition:opacity 0.2s}
   .modal-add:hover{opacity:0.88}
- 
+
   /* CART */
   .cart-panel{position:fixed;right:0;top:0;height:100vh;width:360px;background:var(--surface);border-left:2px solid var(--border);z-index:300;transform:translateX(100%);transition:transform 0.3s ease;display:flex;flex-direction:column}
   .cart-panel.open{transform:translateX(0)}
@@ -135,23 +135,23 @@
   .checkout-btn{width:100%;padding:14px;background:linear-gradient(135deg,var(--p1),var(--p4));color:#fff;border:none;border-radius:30px;font-size:15px;font-weight:700;cursor:pointer;font-family:'Nunito',sans-serif}
   .checkout-btn:hover{opacity:0.88}
   .empty-cart{text-align:center;padding:40px 20px;color:var(--text3);font-size:15px}
- 
+
   /* CUSTOM SECTION */
   .custom-section{margin:0 40px 60px;background:var(--surface);border:2px solid var(--border);border-radius:var(--radius-lg);padding:40px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
   .custom-section h2{font-family:'Pacifico',cursive;font-size:28px;margin-bottom:12px;background:linear-gradient(90deg,var(--p3),var(--p4));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
   .custom-section p{font-size:15px;color:var(--text2);line-height:1.6;margin-bottom:24px}
   .custom-visual{height:160px;background:var(--surface2);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;font-size:72px}
- 
+
   /* FOOTER */
   .footer{border-top:1px solid var(--border);padding:36px 40px;display:flex;justify-content:space-between;align-items:center}
   .footer p{font-size:13px;color:var(--text3);font-weight:600}
   .footer-links{display:flex;gap:20px}
   .footer-links a{font-size:13px;color:var(--text3);text-decoration:none;font-weight:600;transition:color 0.2s}
   .footer-links a:hover{color:var(--p1)}
- 
+
   .toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--p1);color:#fff;border:none;padding:12px 22px;border-radius:30px;font-size:14px;font-weight:700;z-index:400;transition:transform 0.3s;white-space:nowrap;font-family:'Nunito',sans-serif}
   .toast.show{transform:translateX(-50%) translateY(0)}
- 
+
   @media(max-width:768px){
     .hero{grid-template-columns:1fr;padding:36px 20px}
     .hero-visual{display:none}
@@ -170,7 +170,7 @@
 </style>
 </head>
 <body>
- 
+
 <nav>
   <div class="logo">Chantals ✨</div>
   <ul class="nav-links">
@@ -185,7 +185,7 @@
     </button>
   </div>
 </nav>
- 
+
 <section class="hero">
   <div class="hero-text">
     <div class="hero-tag">✨ Handgefertigt mit Liebe & PLA</div>
@@ -204,14 +204,14 @@
     <div class="hero-pill">PLA · Langlebig</div>
   </div>
 </section>
- 
+
 <div class="filters">
   <button class="filter-btn active" onclick="filterProducts(this,'alle')">Alle</button>
   <button class="filter-btn" onclick="filterProducts(this,'deko')">Deko</button>
   <button class="filter-btn" onclick="filterProducts(this,'figuren')">Figuren</button>
   <button class="filter-btn" onclick="filterProducts(this,'haushalt')">Haushalt</button>
 </div>
- 
+
 <section class="section">
   <div class="section-header">
     <span class="section-title">Meine Produkte</span>
@@ -219,7 +219,7 @@
   </div>
   <div class="products" id="products-grid"></div>
 </section>
- 
+
 <section class="custom-section" id="custom">
   <div>
     <h2>Custom-Anfrage</h2>
@@ -230,7 +230,7 @@
   </div>
   <div class="custom-visual">🖨️</div>
 </section>
- 
+
 <footer class="footer">
   <p>© 2025 Chantals · Alle Rechte vorbehalten</p>
   <div class="footer-links">
@@ -239,7 +239,7 @@
     <a href="mailto:blutbadbrise@gmail.com">Kontakt</a>
   </div>
 </footer>
- 
+
 <!-- MODAL -->
 <div class="modal-overlay" id="modal" onclick="if(event.target===this)closeModal()">
   <div class="modal">
@@ -259,7 +259,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- CART -->
 <div class="cart-panel" id="cart-panel">
   <div class="cart-header">
@@ -275,14 +275,14 @@
     <button class="checkout-btn" onclick="alert('Hier kannst du später Stripe oder PayPal einbinden!')">Zur Kasse ✨</button>
   </div>
 </div>
- 
+
 <div class="toast" id="toast"></div>
- 
+
 <script>
 const products=[
   {id:1,cat:'figuren',name:'Geißbock Domstadt',desc:'Geißbock zum hinstellen und anstarren. Ein echter Hingucker für jeden Raum.',price:25.00,badge:'',emoji:'🐐',img:'images/WhatsApp%20Image%202026-05-06%20at%2012.59.18.jpeg',
    specs:[['Material','PLA'],['Farbe','Gold / Schwarz'],['Lieferzeit','3-5 Werktage']]},
-  {id:2,cat:'deko',name:'Name2',desc:'Beschreibung 2',price:99.00,badge:'neu',emoji:'✨',
+  {id:2,cat:'deko',name:'Name2',desc:'Beschreibung 2',price:99.00,badge:'neu',emoji:'✨',img:'images/bunny1.png',
    specs:[['Material','PLA'],['Farbe','Nach Absprache'],['Lieferzeit','3-5 Werktage']]},
   {id:3,cat:'deko',name:'Name3',desc:'Beschreibung 3',price:99.00,badge:'',emoji:'🌸',
    specs:[['Material','PLA'],['Farbe','Nach Absprache'],['Lieferzeit','3-5 Werktage']]},
@@ -291,10 +291,10 @@ const products=[
   {id:5,cat:'figuren',name:'Name5',desc:'Beschreibung 5',price:99.00,badge:'',emoji:'🎭',
    specs:[['Material','PLA'],['Farbe','Nach Absprache'],['Lieferzeit','3-5 Werktage']]},
 ];
- 
+
 let cart=[];
 let activeFilter='alle';
- 
+
 function renderProducts(filter){
   filter=filter||'alle';
   const grid=document.getElementById('products-grid');
@@ -318,14 +318,14 @@ function renderProducts(filter){
     </div>
   `).join('');
 }
- 
+
 function filterProducts(btn,filter){
   document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
   btn.classList.add('active');
   activeFilter=filter;
   renderProducts(filter);
 }
- 
+
 function openModal(id){
   const p=products.find(x=>x.id===id);
   document.getElementById('modal-title').textContent='✨ '+p.name;
@@ -344,7 +344,7 @@ function openModal(id){
   document.getElementById('modal').classList.add('open');
 }
 function closeModal(){document.getElementById('modal').classList.remove('open');}
- 
+
 function addToCart(id){
   const p=products.find(x=>x.id===id);
   if(!cart.find(c=>c.id===id)){cart.push({...p,qty:1});showToast(p.emoji+' '+p.name+' hinzugefügt!');}
